@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  supabase:
+    image: supabase/postgres:15.8.1.060
+    container_name: aira_supabase
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "54322:5432"
+    volumes:
+      - supabase_db_data:/var/lib/postgresql/data
+
+  fastapi:
+    build: .
+    container_name: aira_fastapi
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - supabase
+
+volumes:
+  supabase_db_data:
