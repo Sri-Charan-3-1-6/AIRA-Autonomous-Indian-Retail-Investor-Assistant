@@ -112,8 +112,8 @@ npm run dev
 - Video Studio: call `GET /video-studio/frames?user_id=system` and verify 6 base64 frames.
 - Audit Layer: call `GET /audit/stats` and `GET /audit/compliance-report`.
 
-## Section 10 — Built for ET Hackathon 2026 with team name and acknowledgments
-Built for ET Hackathon 2026 by Team AIRA.
+## Section 10 — Built for ET Hackathon 2026 and acknowledgments
+Built for ET Hackathon 2026 by Sri Charan.
 
 Acknowledgments:
 - ET Markets data context and market-news reference stream.
